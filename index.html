@@ -1,0 +1,36 @@
+
+<script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+<script type="text/javascript" src="js/bindWithDelay.js"></script>
+<script type="text/javascript" src="js/textSelect.js"></script>
+<script type="text/javascript" src="js/highlight.js"></script>
+<script type="text/javascript" src="js/rangy/rangy-core.js"></script>
+
+<style>
+body { background: #eee; width: 700px; margin: 50px auto; font-family: Inconsolata; }
+.highlight { background-color: yellow }
+</style>
+
+<script type="text/javascript">
+  function hiliter(word, element) {
+      var rgxp = new RegExp(word, 'g');
+      var repl = '<span class="myClass">' + word + '</span>';
+      element.innerHTML = element.innerHTML.replace(rgxp, repl);
+  }
+  $(document).bind('textselect', function (evt, string, element) {
+    $('p').removeHighlight();
+    if (string != "") {
+      $('p').highlight(string.trim());
+    }
+  });
+</script>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eleifend, tortor nec consectetur faucibus, justo ipsum sodales est, sed consectetur sapien erat ut turpis. Donec et justo elit, id dapibus ante. Ut ut eros laoreet diam pharetra molestie ut elementum nibh. Nam vestibulum ultrices dui, facilisis vulputate velit scelerisque imperdiet. Nulla ac dolor magna. Praesent sit amet sapien quam, vitae convallis turpis. Aenean et sapien turpis. Proin erat est, facilisis at consequat semper, facilisis sed risus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In posuere faucibus risus et dignissim. Nam tortor mauris, congue ac imperdiet tincidunt, vehicula ut eros.
+
+<p>Aliquam aliquet nisl vitae libero mollis molestie viverra nibh hendrerit. Cras quis nibh sem, eget dignissim augue. Donec imperdiet elementum enim, a viverra ligula facilisis sit amet. Etiam nisl odio, venenatis posuere malesuada ultrices, convallis non massa. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Fusce lorem lorem, pharetra et varius quis, faucibus sit amet lacus. Aliquam rhoncus, erat vel imperdiet suscipit, ante erat vehicula massa, ut adipiscing tellus mi eget massa.
+
+<p>Proin mattis, elit et gravida imperdiet, ante elit fermentum mi, vel luctus enim enim scelerisque mauris. Quisque feugiat ultrices lacus non scelerisque. Aenean luctus laoreet nisi, vel tincidunt metus pulvinar non. Fusce fringilla molestie sapien, eu feugiat quam vestibulum et. Vivamus nisi justo, faucibus vitae consequat eu, vestibulum et ligula. Quisque ac mauris ligula, venenatis luctus lacus. Maecenas eu nunc mollis nisi laoreet aliquet. Sed sem nunc, facilisis eu sollicitudin laoreet, adipiscing consectetur sapien. Mauris ac arcu a tellus feugiat ultrices. Proin eget magna eu erat posuere cursus. Aenean non magna orci, ac pharetra lectus. Quisque vestibulum facilisis risus, ac varius diam sagittis nec. Sed sem nulla, varius sed ultricies sed, tristique at risus. Nam quis purus et elit congue faucibus sed id diam. Pellentesque scelerisque odio vel leo tempor faucibus. Pellentesque eget massa cursus nisi vestibulum sodales.
+
+<p>In id quam lorem, et placerat risus. Praesent purus dolor, dictum sed varius id, scelerisque ac elit. Vivamus erat urna, malesuada et ullamcorper eget, luctus at mauris. Cras urna sapien, auctor ut luctus a, consectetur vel urna. Praesent feugiat sagittis vestibulum. Aenean hendrerit dui nec mauris tristique pretium. Morbi sed turpis orci. Suspendisse quis mauris elit. Phasellus sodales pulvinar tellus, non sagittis lectus vehicula eget. Cras ut nulla sed ligula consequat auctor ullamcorper eget mauris. Etiam pellentesque tincidunt pharetra. Nam vitae libero nibh. Vestibulum quis consequat massa. Nulla porta eros ante, vitae molestie metus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
+
+<p>Phasellus consequat, est vitae blandit tincidunt, massa sapien sagittis libero, ut faucibus tellus eros non odio. Quisque vitae libero felis, a vehicula nisl. Fusce laoreet, lacus eu pulvinar ultricies, nulla eros porttitor sapien, non dapibus elit tellus in eros. Nam ac ullamcorper nisi. Nulla suscipit magna sed enim sagittis id vulputate nisi egestas. Aenean rutrum quam vel ipsum suscipit in feugiat leo pretium. In hac habitasse platea dictumst. Donec congue turpis et est commodo at varius metus adipiscing. Morbi commodo faucibus iaculis. Vivamus lacinia condimentum urna vitae convallis. Cras eu risus at est mollis mollis.
+
